@@ -23,7 +23,7 @@ exports.css = function(request, response) {
 
 exports.js = function(request, response) {
 	if (request.url.indexOf(".js") !== -1) {
-		console.log("Rozpoczynam wczytanie css");
+		console.log("Rozpoczynam wczytanie js");
 		const file = fs.readFileSync(`.${request.url}`, {'encoding' : 'utf8'});
 		response.writeHead(200, {'Content-Type' : 'text/javascript"'});
 		response.write(file);
