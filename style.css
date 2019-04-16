@@ -1,0 +1,42 @@
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff
+}
+
+h1 {
+	text-align: center;
+	color: red;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+input[type=file] {
+	display: block;
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.btn-default.active, .btn-default:active {
+	background-color: #e0e0e0;
+	border-color: #dbdbdb;
+}
+
+.btn-default:focus, .btn-default:hover {
+	background-color: #e0e0e0;
+	background-position: 0 -15px;
+}
+
+.btn-default:hover {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}

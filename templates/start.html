@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-<body>
+<body class="box">
 <h1>Wgrywam plik</h1>
-<form action="/upload" enctype="multipart/form-data" method="post">
-  <label>Tytuł pliku</label>
-  <input type="text" name="title">
-  <br>
-  <label>Plik</label>
-  <input type="file" name="upload" multiple="multiple"><br>
-  <input type="submit" value="Wyślij">
-</form>
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <h3>File Input Example</h3>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+    <!-- COMPONENT START -->
+      <div class="form-group">
+        <div class="input-group input-file" name="Fichier1">
+			  <span class="input-group-btn">
+          <button class="btn btn-default btn-choose" type="button">Choose</button>
+    	  </span>
+        <input type="text" class="form-control" placeholder='Choose a file...'/>
+        <span class="input-group-btn">
+          <button class="btn btn-warning btn-reset" type="button">Reset</button>
+    	  </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-default btn-choose" type="submit" value="Wyślij">
+        <button type="reset" class="btn btn-danger">Reset</button>
+      </div>
+  </form>
+  </div>
+</div>
+<script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

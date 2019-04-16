@@ -11,6 +11,7 @@ function start () {
 		
 		response.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
 		
+	
 		switch (request.url) { // switch rozróżniający zapytania
 			case '/':
 			case '/start':
@@ -22,6 +23,12 @@ function start () {
 			case '/show':
 				handlers.show(request, response);
 				break;
+			case '/style.css':
+				handlers.css(request,response);
+				break;
+			case '/js/scripts.js':
+				handlers.js(request,response);
+			break;
 			default:
 				handlers.error(request, response);
 		}

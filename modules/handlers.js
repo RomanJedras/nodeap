@@ -11,6 +11,27 @@ exports.welcome = function(request, response) {
 	});
 };
 
+exports.css = function(request, response) {
+	if (request.url.indexOf(".css") !== -1) {
+		console.log("Rozpoczynam wczytanie css");
+		const file = fs.readFileSync(`.${request.url}`, {'encoding' : 'utf8'});
+		response.writeHead(200, {'Content-Type' : 'text/css'});
+		response.write(file);
+		response.end();
+	}
+};
+
+exports.js = function(request, response) {
+	if (request.url.indexOf(".js") !== -1) {
+		console.log("Rozpoczynam wczytanie css");
+		const file = fs.readFileSync(`.${request.url}`, {'encoding' : 'utf8'});
+		response.writeHead(200, {'Content-Type' : 'text/javascript"'});
+		response.write(file);
+		response.end();
+	}
+};
+
+
 exports.error = function(request, response) {
 	console.log("Nie wiem co robić.");
 	response.write("404 :(");
